@@ -40,7 +40,7 @@ export default function Home({ allQuotesData }) {
         <meta name="description" content="content"></meta>
       </Head>
       <main
-        className={`bg-gradient-to-br from-green-400 to-green-800 h-screen flex justify-center items-center ${inter.variable}`}
+        className={`bg-gradient-to-br from-green-400 to-green-800 h-screen flex flex-col justify-center items-center ${inter.variable}`}
       >
         <section className="bg-white p-10 pt-8 mx-5 flex flex-col gap-4 rounded-lg shadow-2xl text-center md:px-20 md:mx-20 lg:px-40 lg:mx-36 max-w-4xl">
           <div className=" text-green-700 mb-10 flex flex-col items-center gap-4 md:gap-6">
@@ -50,8 +50,7 @@ export default function Home({ allQuotesData }) {
               className="text-xl font-raleway font-semibold md:text-2xl lg:text-3xl animate-fade-in"
               key={quote.quote}
             >
-              {quote.quote ||
-                "You will succeed, beautiful human. asdfasdf asdf asd asdf asdf asdf. as asdf sdasdf"}
+              {quote.quote || "You will succeed, beautiful human."}
             </h3>
 
             <p
@@ -79,6 +78,7 @@ export default function Home({ allQuotesData }) {
             </button>
           </div>
         </section>
+        <small className="text-green-50 translate-y-3 text-xs">by Alrho</small>
       </main>
     </div>
   );
