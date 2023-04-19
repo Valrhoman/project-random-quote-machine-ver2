@@ -14,7 +14,7 @@ module.exports = {
       },
       fontFamily: {
         inter: ["var(--font-inter)"],
-        raleway: ["var(--font-raleway"],
+        raleway: ["var(--font-raleway)"],
       },
       animation: {
         "fade-in": "fadeIn 1.5s",
