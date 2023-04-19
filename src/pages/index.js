@@ -1,16 +1,16 @@
 import Head from "next/head";
 import { useState } from "react";
-import { Inter } from "next/font/google";
+import { Inter, Raleway } from "next/font/google";
 import { BsTwitter } from "react-icons/bs";
 import { GoQuote } from "react-icons/go";
 import { getQuotesData } from "../../lib/quotes.js";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-// const roboto = Roboto({
-//   subsets: ["latin"],
-//   weight: "400",
-//   variable: "--font-roboto",
-// });
+const raleway = Raleway({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-raleway",
+});
 
 export default function Home({ allQuotesData }) {
   const [quote, setQuote] = useState({});
@@ -40,7 +40,7 @@ export default function Home({ allQuotesData }) {
         <meta name="description" content="content"></meta>
       </Head>
       <main
-        className={`bg-gradient-to-br from-green-400 to-green-800 h-screen flex flex-col justify-center items-center ${inter.variable}`}
+        className={`bg-gradient-to-br from-green-400 to-green-800 h-screen flex flex-col justify-center items-center ${raleway.variable}`}
       >
         <section className="bg-white p-10 pt-8 mx-5 flex flex-col gap-4 rounded-lg shadow-2xl text-center md:px-20 md:mx-20 lg:px-40 lg:mx-36 max-w-4xl">
           <div className=" text-green-700 mb-10 flex flex-col items-center gap-4 md:gap-6">
@@ -78,7 +78,9 @@ export default function Home({ allQuotesData }) {
             </button>
           </div>
         </section>
-        <small className="text-green-50 translate-y-3 text-xs">by Alrho</small>
+        <small className="text-green-50 font-raleway translate-y-3 text-xs">
+          by Alrho
+        </small>
       </main>
     </div>
   );
