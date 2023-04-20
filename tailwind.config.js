@@ -17,7 +17,7 @@ module.exports = {
         raleway: ["var(--font-raleway)"],
       },
       animation: {
-        "fade-in": "fadeIn 1.5s",
+        "fade-in": "fadeIn 2.5s",
       },
     },
   },
