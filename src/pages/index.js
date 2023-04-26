@@ -1,14 +1,13 @@
 import Head from "next/head";
 import { useState } from "react";
 
-import { Inter, Raleway } from "next/font/google";
+import { Raleway } from "next/font/google";
 import { BsTwitter } from "react-icons/bs";
 import { GoQuote } from "react-icons/go";
 import { getQuotesData } from "../../lib/quotes.js";
 
 import { motion } from "framer-motion";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const raleway = Raleway({
   subsets: ["latin"],
   weight: "400",
@@ -17,18 +16,12 @@ const raleway = Raleway({
 
 export default function Home({ allQuotesData }) {
   const [quote, setQuote] = useState({});
-  const [text, setText] = useState("Some text");
 
   function getRandomQuote() {
     return allQuotesData.quotes[
       Math.floor(Math.random() * allQuotesData.quotes.length)
     ];
   }
-
-  // let randomQuote = getRandomQuote();
-
-  // let currentQuote = randomQuote.quote;
-  // let currentAuthor = randomQuote.author;
 
   function handleClick() {
     console.log(quote);
@@ -40,8 +33,10 @@ export default function Home({ allQuotesData }) {
   return (
     <div>
       <Head>
+        <link rel="icon" href="/favicon2.ico" />
         <title>Random Quote Machine</title>
-        <meta name="description" content="content"></meta>
+
+        <meta name="description" content="Generate random quotes"></meta>
       </Head>
       <main
         className={`bg-gradient-to-br from-green-400 to-green-800 h-screen flex flex-col justify-center items-center ${raleway.variable}`}
