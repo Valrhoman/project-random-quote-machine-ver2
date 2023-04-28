@@ -29,8 +29,8 @@ const QuoteItem = ({ quote, onDelete, edit, setEdit }) => {
   return (
     <motion.div
       onClick={handleEdit}
-      className={`flex text-xs text-gray-900 py-1 px-2 gap-2 bg-gray-50 hover:bg-gray-200 cursor-pointer rounded-md group ${
-        edit === quote.id ? "bg-gray-400 hover:bg-gray-400" : ""
+      className={`flex text-xs text-gray-900 py-1 px-2 gap-2 cursor-pointer rounded-md group ${
+        edit === quote.id ? "bg-gray-400" : "bg-gray-50 hover:bg-gray-200"
       }`}
     >
       {edit === quote.id ? (
