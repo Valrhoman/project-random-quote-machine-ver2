@@ -25,13 +25,13 @@ export default function AddQuoteView({ open, setOpen, onClose }) {
       >
         <label className="py-2">
           <p>Quote</p>
-          <input
+          <textarea
             name="quote"
             className="form-input self-stretch"
             placeholder="input text"
             autoFocus
             required
-          ></input>
+          ></textarea>
         </label>
         <label className="py-2">
           <p>Author</p>
@@ -41,7 +41,7 @@ export default function AddQuoteView({ open, setOpen, onClose }) {
             placeholder="input text"
           ></input>
         </label>
-        <button className="bg-green-700 rounded-md text-white py-2 mt-3 self-stretch hover:bg-green-900">
+        <button className="bg-green-700 rounded-md text-white py-2 mt-3 self-stretch hover:bg-green-900 transition-all">
           Add
         </button>
       </form>

@@ -35,6 +35,11 @@ export default function Home({ apiQuotes }) {
     setOpenList(true);
   }
 
+  function handleClickReset(e) {
+    e.preventDefault();
+    setQuotesData(apiQuotes);
+  }
+
   return (
     <div>
       <Header />
@@ -64,7 +69,11 @@ export default function Home({ apiQuotes }) {
           </div>
         </Modal> */}
         <QuotesContext.Provider value={[quotesData, setQuotesData]}>
-          <QuotesListView open={openList} onClose={() => setOpenList(false)} />
+          <QuotesListView
+            open={openList}
+            onClose={() => setOpenList(false)}
+            onReset={handleClickReset}
+          />
         </QuotesContext.Provider>
         <Footer />
       </main>
