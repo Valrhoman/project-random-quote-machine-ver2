@@ -34,4 +34,8 @@ a {
     animation-name: fadeIn;
     animation-duration: 3s;
   }
+
+  .form-input {
+    @apply p-2 bg-slate-100 text-center w-64 focus:outline-green-600;
+  }
 }
