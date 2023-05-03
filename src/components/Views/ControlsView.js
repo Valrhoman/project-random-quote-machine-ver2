@@ -16,7 +16,7 @@ export default function ControlsView({ quote, onClickNew, onClickList }) {
       <motion.div layout className="flex gap-3 box-border">
         <motion.button
           layout="position"
-          className="bg-gray-50 text-green-700 font-sans px-4 py-2 rounded-md border-green-700 border-2 hover:text-white hover:bg-green-700 active:bg-green-950 active:border-green-950 transition-all duration-300 md:text-base md:px-6 md:py-3"
+          className="font-sans px-4 py-2 rounded-md border-green-700 border-2 text-white bg-green-700 active:bg-green-950 active:border-green-950 transition-all duration-300 md:text-base md:px-6 md:py-3"
           onClick={onClickNew}
         >
           New Quote
